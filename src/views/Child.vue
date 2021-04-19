@@ -1,7 +1,9 @@
 <template>
   <div class="cas-child">
     <el-scrollbar tag="ul">
-      <li v-for="(item, index) in list" :key="index" @click="open(index)">
+      <li v-for="(item, index) in list"
+          :key="index"
+          @click="open(index)">
         {{ item.name }}
       </li>
     </el-scrollbar>
@@ -26,7 +28,7 @@ export default {
   },
   methods: {
     open (index) {
-      console.log(this.index, index, '子this.index-----------')
+      // console.log(this.index, index, '子this.index-----------')
       this.$emit('openChild', index, this.index + 1)
     }
   }
